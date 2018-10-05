@@ -1,0 +1,12 @@
+<form [formGroup]="generatorForm" (ngSubmit)="onGenerate()">
+  <label>
+    First Name:
+    <input type="text" formControlName="text">
+  </label>
+  <button type="submit">Submit</button>
+</form>
+
+<div *ngFor="let code of codes">
+  {{code}} / <button (click)="decode(code)">d</button>
+</div>
+{{decoded}}
